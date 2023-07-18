@@ -41,6 +41,7 @@ class Button():
     return action
   
 def printBoard():
+  print("-=-=-==-=-=-=-==-=-=-=-=-=-")
   arr=[["O","O","O","O","O"],
        ["O","O","O","O","O"],
        ["O","O","O","O","O"],
@@ -136,13 +137,14 @@ while run:
     pygame.draw.rect(screen, "black", box)
   for box in boxes:
     pygame.draw.rect(screen, "purple", box)
-      
+
+#important code that finds the index of the box that i am currently hoving over with my mouse and saves it
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN:
-      if event.button == 1:
-        for num, box in enumerate(boxes):
-          if box.collidepoint(event.pos):
-            active_box = num
+      if event.button == 1: # if left mouse button gets pressed down
+        for num, box in enumerate(boxes): # loop though all boxes 
+          if box.collidepoint(event.pos): # find the box that is coliding with the mouse
+            active_box = num # save it in active_box
 
     if event.type == pygame.MOUSEBUTTONUP:
       if event.button == 1:
@@ -160,14 +162,17 @@ while run:
               boxes[active_box].y = gridCs[closey].y
               if DEBUGGING: print(closey)
               if boxes[active_box].x + boxes[active_box].width > 710:
-                boxes[active_box].x = 50
+                #if the place he user tryed to put the box is invalid then I move the box back to spawn
+                boxes[active_box].x = 50 
                 boxes[active_box].y = 50  
                 print("Invalid")
               elif boxes[active_box].y + boxes[active_box].height > 450:
+                #if the place he user tryed to put the box is invalid then I move the box back to spawn
                 boxes[active_box].x = 50
                 boxes[active_box].y = 50
                 print("Invalid")
               elif boxes[active_box].colliderect(boxes[off]):
+                #if the place he user tryed to put the box is invalid then I move the box back to spawn
                 boxes[active_box].x = 50
                 boxes[active_box].y = 50
                 print("Invalid")
