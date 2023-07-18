@@ -10,7 +10,7 @@ while True:
         int(arrSize)
     except:
         print("Please provide a int")
-        cole = True
+        cole = True 
         continue
     if cole != True:
         if int(arrSize) < 3: #checking for out of bounds on row
