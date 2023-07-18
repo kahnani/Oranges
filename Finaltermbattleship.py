@@ -13,8 +13,8 @@ while True:
         cole = True
         continue
     if cole != True:
-        if int(arrSize) < 1: #checking for out of bounds on row
-            print('Number has to be greater then 0... ben')
+        if int(arrSize) < 3: #checking for out of bounds on row
+            print('Number has to be greater then 2... Ben')
             continue
     break
     
@@ -46,6 +46,7 @@ allMoves = []
 #random.randrange(0,3)
 direct = random.randrange(0,4) # 0 = vertical, 1 = horizontal, 2 = sideways--top left to bottom right, 3 = sideways bottom left to top right
 length = random.randrange(2,5)
+if int(length) > int(arrSize): length = int(arrSize)-1
 #okay so i have to edit the starting pos according to the direction, i will randomly roll the starting point,
 # what is vertical will always be going down , sideways always left to right etc.
 if direct == 0:
@@ -75,7 +76,7 @@ for i in range(length):
 print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 for i in range(len(allShip)):
     print(str(allShip[i].y) + " , " + str(allShip[i].x))
-    arr[allShip[i].x][allShip[i].y] = "■"
+    #arr[allShip[i].x][allShip[i].y] = "■"
 print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 #main game loop
 while True:
@@ -94,7 +95,7 @@ while True:
             cole = True
             continue
         if cole != True:
-            if int(Trow) < 0 or int(Trow) > 4: #checking for out of bounds on row
+            if int(Trow) < 0 or int(Trow) >= int(arrSize): #checking for out of bounds on row
                 print('Please enter a number in the bounds.')
                 continue
         break
@@ -110,7 +111,7 @@ while True:
             cole = True
             continue
         if cole != True:
-            if int(Tcol) < 0 or int(Tcol) > 4: #checking for out of bounds on row
+            if int(Tcol) < 0 or int(Tcol) >= int(arrSize): #checking for out of bounds on row
                 print('Please enter a number in the bounds.')
                 continue
         break
