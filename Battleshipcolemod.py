@@ -3,17 +3,17 @@ import random
 DEBUGG = False
 
 
-# arr = [["O","O","O","O","O"],
-#        ["O","O","O","O","O"],
-#        ["O","O","O","O","O"],
-#        ["O","O","O","O","O"],
-#        ["O","O","O","O","O"]]
+arr = [["O","O","O","O","O"],
+        ["O","O","O","O","O"],
+        ["O","O","O","O","O"],
+        ["O","O","O","O","O"],
+        ["O","O","O","O","O"]]
 
 # #method that will print the bord
-# def printBoard():
-#     for r in range(len(arr)):
-#         print(arr[r])
-#         print()
+def printBoard():
+     for r in range(len(arr)):
+         print(arr[r])
+         print()
 #blueprint currently holding all the parts of the ships
 class ship():
     def __init__(self, x, y, name):
