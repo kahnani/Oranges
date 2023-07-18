@@ -14,7 +14,7 @@ while True:
         continue
     if cole != True:
         if int(arrSize) < 3: #checking for out of bounds on row
-            print('Number has to be greater then 0... ben')
+            print('Number has to be greater then 2... Ben')
             continue
     break
     
