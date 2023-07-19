@@ -15,8 +15,11 @@ SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Ship Battles by Cole Kleinebekel and Jazmyn Revels')
 
-start_img = pygame.image.load('C:\\Users\\SERN_INTERN\\Downloads\\start_btn.png')
-rotate_img = pygame.image.load('C:\\Users\\SERN_INTERN\\Downloads\\rotate.png')
+###################### EDIT FILE PATH ########################
+start_img = pygame.image.load('C:\\Users\\molet\\Downloads\\start_btn.png') #<-----------
+rotate_img = pygame.image.load('C:\\Users\\molet\\Downloads\\rotate.png') #<-------------
+##############################################################
+
 rotate_img = pygame.transform.scale(rotate_img, (int(200), int(200)))
 
 #  green, blue colour .
@@ -228,7 +231,7 @@ while run:
   
     rotateor = pygame.Rect(0, 400, 250, 200)
     pygame.draw.rect(screen, (6,26,84), rotateor)
-    screen.blit(rotate_img, (rotateor.x, rotateor.y))
+    screen.blit(rotate_img, (rotateor.x+20, rotateor.y))
   
     for box in gridCs:
       pygame.draw.rect(screen, "black", box)
