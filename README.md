@@ -6,8 +6,5 @@ Pygame_Battleship_19.py is currently are launchable. It requires 4 things for it
 
 
 
-Pygame_Battleship_18.py is currently launchable. In order for it to run you must have pygame installed. 
-At the bottom there is a start_btn.png, you will have to import it into VS code and copy the path. Change the file path to the button on line 16(theres a arrow pointing to it).
-
 Place your ships prior to the start of the game. To rotate ships drag them in the box located in the bottom left corner of the game screen.
 Press the start key and begin your game of battle ship against the computer. 
