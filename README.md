@@ -1,7 +1,7 @@
 # Oranges
 This is the final Battle Ship project for the 2023 Robins Airforce Base Internship. 
 
-Pygame_Battleship_26.py is currently are launchable. It requires 4 things for it to work. You have to have pygame intalled, you have to have random installed(pretty sure this comes with python), at the bottom pf the repository there is a start_btn.png and a rotate.png, you will have to download and import both into VS code and copy there final path. Change the file path to the button on line 19(theres a arrow pointing to it) and change the file path to the rotate on line 20(theres a arrow pointing to it)
+Pygame_Battleship_26.py is currently launchable. It requires 4 things for it to work. You have to have pygame intalled, you have to have random installed(pretty sure this comes with python), at the bottom pf the repository there is a start_btn.png and a rotate.png, you will have to download and import both into VS code and copy there final path. Change the file path to the button on line 19(theres a arrow pointing to it) and change the file path to the rotate on line 20(theres a arrow pointing to it)
 
 
 
